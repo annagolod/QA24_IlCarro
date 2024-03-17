@@ -22,13 +22,20 @@ public class HelperUser extends HelperBase{
     }
 
     public boolean isLogged(){
-        return isElementPresent(By.xpath("//h2[text() = 'Logged in success']"));
+        return isElementPresent(By.xpath("//a[text() = ' Logout ']"));
     }
     public void logout(){
         click(By.cssSelector("a[href='/logout?url=%2Fsearch']"));
     }
+    //"//*[.=' Logout ' ]"
 
 
+    public String getMessage() {
+        pause(2000);
+        return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
+    }
 
-
+    public void clickOkButton() {
+        click(By.xpath("//button[text() = 'Ok']"));
+    }
 }
