@@ -38,23 +38,24 @@ public class LoginTests extends TestBase{
 
     }
 
-//    @Test
-//    public void loginNegativeTestWrongEmail(){
-//        app.getHelperUser().openLoginForm();
-//        app.getHelperUser().fillLoginForm("tretam@gmail.com", "Carro54321#");
-//        app.getHelperUser().submitLogin();
-//
+    @Test
+    public void loginNegativeTestWrongEmail(){
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("tretam@gmail.com", "Carro54321#");
+        app.getHelperUser().submitLogin();
+
 //        Assert.assertFalse(app.getHelperUser().isLogged());
-//
-//    }
-//
-//    @Test
-//    public void loginNegativeTestWrongPassword(){
-//        app.getHelperUser().openLoginForm();
-//        app.getHelperUser().fillLoginForm("tretam0810@gmail.com", "Carro543#");
-//        app.getHelperUser().submitLogin();
-//
+
+    }
+
+    @Test
+    public void loginNegativeTestWrongPassword(){
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("tretam0810@gmail.com", "Carro543#");
+        app.getHelperUser().submitLogin();
+
 //        Assert.assertFalse(app.getHelperUser().isLogged());
-//
-//    }
+
+    }
+
 }
