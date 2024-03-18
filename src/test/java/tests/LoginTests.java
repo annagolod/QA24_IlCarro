@@ -1,6 +1,7 @@
 package tests;
 
 import models.User;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -12,6 +13,12 @@ public class LoginTests extends TestBase{
     public void preCondition(){
         if(app.getHelperUser().isLogged()){
             app.getHelperUser().logout();
+        }
+    }
+    @AfterMethod
+    public void postCondition(){
+        if(app.getHelperUser().isElementPresent(By.xpath("//button[text() = 'Ok']"))) {
+            app.getHelperUser().clickOkButton();
         }
     }
 
@@ -28,13 +35,8 @@ public class LoginTests extends TestBase{
 
     }
 
-    @AfterMethod
-    public void postCondition(){
-        app.getHelperUser().clickOkButton();
-    }
-
     @Test
-    public void loginPositiveTest(){
+    public void loginSuccess(){
        app.getHelperUser().openLoginForm();
        app.getHelperUser().fillLoginForm("tretam0810@gmail.com", "Carro54321#");
        app.getHelperUser().submitLogin();
@@ -50,26 +52,39 @@ public class LoginTests extends TestBase{
 
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
 
+
+    }
+
+   //Invalid Email without "@"
+    @Test
+    public void loginInvalidEmail(){
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("tretam0810gmail.com", "Carro54321#");
+        app.getHelperUser().submitLogin();
+
+       //Assert.assertFalse(app.getHelperUser().isElementPresent(By.id("cdk-overlay-0")));
+       Assert.assertFalse(app.getHelperUser().isElementPresent(By.xpath("//button[text() = 'Ok']")));
     }
 
     @Test
-    public void loginNegativeTestWrongEmail(){
+    public void loginWrongEmail(){
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm("tretam@gmail.com", "Carro54321#");
         app.getHelperUser().submitLogin();
 
-//        Assert.assertFalse(app.getHelperUser().isLogged());
+        //Assert.assertEquals(app.getHelperUser().getMessage(), "\"Login or Password incorrect\"");
+        Assert.assertNotEquals(app.getHelperUser().getMessage(), "Logged in success");
 
     }
 
     @Test
-    public void loginNegativeTestWrongPassword(){
+    public void loginWrongPassword(){
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm("tretam0810@gmail.com", "Carro543#");
         app.getHelperUser().submitLogin();
 
-//        Assert.assertFalse(app.getHelperUser().isLogged());
-
+        //Assert.assertEquals(app.getHelperUser().getMessage(), "\"Login or Password incorrect\"");
+        Assert.assertNotEquals(app.getHelperUser().getMessage(), "Logged in success");
     }
 
 }
