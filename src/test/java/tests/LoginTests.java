@@ -23,7 +23,7 @@ public class LoginTests extends TestBase{
     }
 
     @Test
-    public void loginPositiveTest1(){
+    public void loginSuccessModel(){
         User user = new User().withEmail("tretam0810@gmail.com").withPassword("Carro54321#");
 //        user.setEmail("tretam0810@gmail.com");
 //        user.setPassword("Carro54321#");
@@ -44,16 +44,7 @@ public class LoginTests extends TestBase{
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
 
     }
-    @Test
-    public void loginPositiveTestModel(){
-        app.getHelperUser().openLoginForm();
-        app.getHelperUser().fillLoginForm("tretam0810@gmail.com", "Carro54321#");
-        app.getHelperUser().submitLogin();
 
-        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
-
-
-    }
 
    //Invalid Email without "@"
     @Test
