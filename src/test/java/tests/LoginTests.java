@@ -51,14 +51,26 @@ public class LoginTests extends TestBase{
     public void loginInvalidEmail(){
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm("tretam0810gmail.com", "Carro54321#");
+        //app.getHelperUser().submitLogin();
+
+
+       Assert.assertTrue(app.getHelperUser().isElementPresent(By.xpath("//div[contains(text(), \"It'snot look like email\")]")));
+       //Assert.assertFalse(app.getHelperUser().isElementPresent(By.xpath("//button[text() = 'Ok']")));
+    }
+
+
+    @Test
+    public void loginInvalidPassword(){
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("tretam0810@gmail.com", "car5");
         app.getHelperUser().submitLogin();
 
-       //Assert.assertFalse(app.getHelperUser().isElementPresent(By.id("cdk-overlay-0")));
-       Assert.assertFalse(app.getHelperUser().isElementPresent(By.xpath("//button[text() = 'Ok']")));
+        //Assert.assertEquals(app.getHelperUser().getMessage(), "\"Login or Password incorrect\"");
+        Assert.assertNotEquals(app.getHelperUser().getMessage(), "Logged in success");
     }
 
     @Test
-    public void loginWrongEmail(){
+    public void loginUnregisteredUser(){
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm("tretam@gmail.com", "Carro54321#");
         app.getHelperUser().submitLogin();
@@ -66,16 +78,6 @@ public class LoginTests extends TestBase{
         //Assert.assertEquals(app.getHelperUser().getMessage(), "\"Login or Password incorrect\"");
         Assert.assertNotEquals(app.getHelperUser().getMessage(), "Logged in success");
 
-    }
-
-    @Test
-    public void loginWrongPassword(){
-        app.getHelperUser().openLoginForm();
-        app.getHelperUser().fillLoginForm("tretam0810@gmail.com", "Carro543#");
-        app.getHelperUser().submitLogin();
-
-        //Assert.assertEquals(app.getHelperUser().getMessage(), "\"Login or Password incorrect\"");
-        Assert.assertNotEquals(app.getHelperUser().getMessage(), "Logged in success");
     }
 
 }
