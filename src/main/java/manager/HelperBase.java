@@ -41,4 +41,11 @@ public class HelperBase {
             throw new RuntimeException(e);
         }
     }
+
+    public boolean isYallaButtonNotActive() {
+        return isElementPresent(By.cssSelector("button[disabled]"));
+
+        //return !wd.findElement(By.cssSelector("button[type = 'submit']")).isEnabled();
+
+    }
 }
