@@ -48,4 +48,8 @@ public class HelperBase {
         //return !wd.findElement(By.cssSelector("button[type = 'submit']")).isEnabled();
 
     }
+
+    public void submit(){
+        click(By.cssSelector("button[type = 'submit']"));
+    }
 }
