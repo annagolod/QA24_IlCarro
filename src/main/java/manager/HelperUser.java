@@ -23,9 +23,6 @@ public class HelperUser extends HelperBase{
         type(By.id("password"), user.getPassword());
     }
 
-    public void submit(){
-        click(By.cssSelector("button[type = 'submit']"));
-    }
 
     public boolean isLogged(){
         return isElementPresent(By.xpath("//a[text() = ' Logout ']"));
