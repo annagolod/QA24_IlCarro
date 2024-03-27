@@ -1,6 +1,7 @@
 package manager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -18,10 +19,17 @@ public class HelperBase {
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
+        clearNew(element);
         if (text != null){
             element.sendKeys(text);
         }
     }
+
+    public void clearNew(WebElement element){
+        element.sendKeys("a");
+        element.sendKeys(Keys.BACK_SPACE);
+    }
+
 
     public void click(By locator){
         WebElement element = wd.findElement(locator);
@@ -51,5 +59,10 @@ public class HelperBase {
 
     public void submit(){
         click(By.cssSelector("button[type = 'submit']"));
+    }
+
+    public String getMessage() {
+        pause(2000);
+        return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
     }
 }

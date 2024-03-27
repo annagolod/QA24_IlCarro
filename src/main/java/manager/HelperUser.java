@@ -33,10 +33,7 @@ public class HelperUser extends HelperBase{
     //"//*[.=' Logout ' ]"
 
 
-    public String getMessage() {
-        pause(2000);
-        return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
-    }
+
 
 
     public void clickOkButton() {
@@ -61,20 +58,23 @@ public class HelperUser extends HelperBase{
     }
 
     public void checkPolicy() {
-        //click(By.id("terms-of-use")); // don't work because of 0 x 0
-        //click(By.cssSelector("label[for = 'terms-of-use']"));
-        JavascriptExecutor js = (JavascriptExecutor) wd;
-        js.executeScript("document.querySelector('#terms-of-use').click()");
+        if(!wd.findElement(By.id("terms-of-use")).isSelected()) {
+            //click(By.id("terms-of-use")); // don't work because of 0 x 0
+            //click(By.cssSelector("label[for = 'terms-of-use']"));
+            JavascriptExecutor js = (JavascriptExecutor) wd;
+            js.executeScript("document.querySelector('#terms-of-use').click()");
+        }
     }
     public void checkPolicyXY(){
-       // Dimension size = wd.manage().window().getSize();// info about monitor
-        WebElement label = wd.findElement(By.cssSelector("label[for = 'terms-of-use']"));
-        Rectangle rect = label.getRect();
-        int w = rect.getWidth();
-        Actions actions = new Actions(wd);
-        int xOffSet = -w/2;
-        actions.moveToElement(label, xOffSet, 0).click().release().perform();
-
+        if(!wd.findElement(By.id("terms-of-use")).isSelected()) {
+            // Dimension size = wd.manage().window().getSize();// info about monitor
+            WebElement label = wd.findElement(By.cssSelector("label[for = 'terms-of-use']"));
+            Rectangle rect = label.getRect();
+            int w = rect.getWidth();
+            Actions actions = new Actions(wd);
+            int xOffSet = -w / 2;
+            actions.moveToElement(label, xOffSet, 0).click().release().perform();
+        }
     }
 
     public void login(User user) {
