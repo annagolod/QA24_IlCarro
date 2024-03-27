@@ -2,6 +2,8 @@ package tests;
 
 import models.User;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -198,7 +200,7 @@ public class RegistrationTests extends TestBase{
         Assert.assertFalse(app.getHelperUser().isLogged());
     }
 
-    @Test(enabled = false)// because of "if" in checkPolicy//
+    @Test
     public void registrationNotCheckedPolicy(){
         User user = new User()
                 .withFirstName("Alisa")
@@ -208,8 +210,7 @@ public class RegistrationTests extends TestBase{
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
-        //app.getHelperUser().checkPolicy();
-        //app.getHelperUser().checkPolicyXY();
+        app.getHelperUser().unCheckPolicy();
         app.getHelperUser().submit();
 
         Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
@@ -233,6 +234,5 @@ public class RegistrationTests extends TestBase{
         Assert.assertEquals(app.getHelperUser().getMessage(), "\"User already exists\"");
         Assert.assertFalse(app.getHelperUser().isLogged());
     }
-
 
 }

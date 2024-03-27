@@ -65,6 +65,13 @@ public class HelperUser extends HelperBase{
             js.executeScript("document.querySelector('#terms-of-use').click()");
         }
     }
+
+    public void unCheckPolicy() {
+        if(wd.findElement(By.id("terms-of-use")).isSelected()) {
+            JavascriptExecutor js = (JavascriptExecutor) wd;
+            js.executeScript("document.querySelector('#terms-of-use').click()");
+        }
+    }
     public void checkPolicyXY(){
         if(!wd.findElement(By.id("terms-of-use")).isSelected()) {
             // Dimension size = wd.manage().window().getSize();// info about monitor
