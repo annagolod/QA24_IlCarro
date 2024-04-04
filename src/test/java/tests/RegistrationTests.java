@@ -62,7 +62,7 @@ public class RegistrationTests extends TestBase{
         //app.getHelperUser().checkPolicyXY();
         app.getHelperUser().submit();
 
-        Assert.assertEquals(app.getHelperUser().getMessage(), "{\"firstName\":\"не должно быть пустым\"}");
+        Assert.assertEquals(app.getHelperUser().getMessage(), "{\"firstName\":\"must not be blank\"}");
         Assert.assertFalse(app.getHelperUser().isLogged());
     }
 
@@ -99,7 +99,7 @@ public class RegistrationTests extends TestBase{
         //app.getHelperUser().checkPolicyXY();
         app.getHelperUser().submit();
 
-        Assert.assertEquals(app.getHelperUser().getMessage(), "{\"lastName\":\"не должно быть пустым\"}");
+        Assert.assertEquals(app.getHelperUser().getMessage(), "{\"lastName\":\"must not be blank\"}");
         Assert.assertFalse(app.getHelperUser().isLogged());
     }
 

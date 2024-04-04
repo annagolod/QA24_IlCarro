@@ -1,0 +1,178 @@
+14:28:48.094 INFO  manager.ApplicationManager - All tests run in Chrome Browser
+14:28:49.959 INFO  manager.ApplicationManager - The link --> https://ilcarro.web.app/search
+14:28:49.981 INFO  manager.ApplicationManager - before find element: By.xpath: //a[text() = ' Logout ']
+14:28:55.012 INFO  manager.ApplicationManager - after find element: By.xpath: //a[text() = ' Logout ']
+14:28:55.014 INFO  manager.ApplicationManager - before find element: By.xpath: //a[@href='/login?url=%2Fsearch']
+14:28:55.027 INFO  manager.ApplicationManager - after find element: By.xpath: //a[@href='/login?url=%2Fsearch']
+14:28:55.037 INFO  manager.ApplicationManager - start method click on element a
+14:28:55.106 INFO  manager.ApplicationManager - method click is executed
+14:28:55.106 INFO  manager.ApplicationManager - before find element: By.id: email
+14:28:55.124 INFO  manager.ApplicationManager - after find element: By.id: email
+14:28:55.129 INFO  manager.ApplicationManager - start method click on element input
+14:28:55.175 INFO  manager.ApplicationManager - method click is executed
+14:28:55.175 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:55.223 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:55.223 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:55.325 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:55.328 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:55.371 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:55.372 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:55.434 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:55.434 INFO  manager.ApplicationManager - before find element: By.id: password
+14:28:55.447 INFO  manager.ApplicationManager - after find element: By.id: password
+14:28:55.454 INFO  manager.ApplicationManager - start method click on element input
+14:28:55.493 INFO  manager.ApplicationManager - method click is executed
+14:28:55.494 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:55.525 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:55.525 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:55.552 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:55.553 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:55.576 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:55.576 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:55.614 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:55.614 INFO  manager.ApplicationManager - before find element: By.cssSelector: button[type = 'submit']
+14:28:55.628 INFO  manager.ApplicationManager - after find element: By.cssSelector: button[type = 'submit']
+14:28:55.636 INFO  manager.ApplicationManager - start method click on element button
+14:28:55.681 INFO  manager.ApplicationManager - method click is executed
+14:28:55.681 INFO  manager.ApplicationManager - before find element: By.xpath: //button[text() = 'Ok']
+14:28:56.752 INFO  manager.ApplicationManager - after find element: By.xpath: //button[text() = 'Ok']
+14:28:56.758 INFO  manager.ApplicationManager - start method click on element button
+14:28:56.797 INFO  manager.ApplicationManager - method click is executed
+14:28:56.814 INFO  tests.TestBase - Name of method --> addNewCarSuccess
+14:28:57.321 INFO  manager.ApplicationManager - before find element: By.xpath: //*[text() = ' Let the car work ']
+14:28:57.334 INFO  manager.ApplicationManager - after find element: By.xpath: //*[text() = ' Let the car work ']
+14:28:57.340 INFO  manager.ApplicationManager - start method click on element a
+14:28:57.418 INFO  manager.ApplicationManager - method click is executed
+14:28:57.420 INFO  manager.ApplicationManager - before find element: By.id: pickUpPlace
+14:28:57.440 INFO  manager.ApplicationManager - after find element: By.id: pickUpPlace
+14:28:57.445 INFO  manager.ApplicationManager - start method click on element input
+14:28:57.488 INFO  manager.ApplicationManager - method click is executed
+14:28:57.489 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:57.528 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:57.528 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:57.576 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:57.576 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:57.613 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:57.614 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:57.671 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:57.672 INFO  manager.ApplicationManager - before find element: By.cssSelector: div.pac-item
+14:28:58.277 INFO  manager.ApplicationManager - after find element: By.cssSelector: div.pac-item
+14:28:58.284 INFO  manager.ApplicationManager - start method click on element div
+14:28:58.328 INFO  manager.ApplicationManager - method click is executed
+14:28:58.328 INFO  manager.ApplicationManager - before find element: By.id: make
+14:28:58.343 INFO  manager.ApplicationManager - after find element: By.id: make
+14:28:58.349 INFO  manager.ApplicationManager - start method click on element input
+14:28:58.383 INFO  manager.ApplicationManager - method click is executed
+14:28:58.385 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.415 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.415 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.444 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.444 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.471 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.472 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.499 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.499 INFO  manager.ApplicationManager - before find element: By.cssSelector: #model
+14:28:58.513 INFO  manager.ApplicationManager - after find element: By.cssSelector: #model
+14:28:58.519 INFO  manager.ApplicationManager - start method click on element input
+14:28:58.558 INFO  manager.ApplicationManager - method click is executed
+14:28:58.558 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.589 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.589 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.621 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.621 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.651 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.652 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.688 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.689 INFO  manager.ApplicationManager - before find element: By.xpath: //input[@id = 'year']
+14:28:58.703 INFO  manager.ApplicationManager - after find element: By.xpath: //input[@id = 'year']
+14:28:58.708 INFO  manager.ApplicationManager - start method click on element input
+14:28:58.746 INFO  manager.ApplicationManager - method click is executed
+14:28:58.746 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.778 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.779 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.820 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.821 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.861 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.862 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:58.906 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:58.909 INFO  manager.ApplicationManager - before find element: By.id: fuel
+14:28:58.924 INFO  manager.ApplicationManager - after find element: By.id: fuel
+14:28:58.945 INFO  manager.ApplicationManager - before find element: By.xpath: .//option[@value = "Petrol"]
+14:28:58.961 INFO  manager.ApplicationManager - after find element: By.xpath: .//option[@value = "Petrol"]
+14:28:58.979 INFO  manager.ApplicationManager - start method click on element option
+14:28:59.008 INFO  manager.ApplicationManager - method click is executed
+14:28:59.008 INFO  manager.ApplicationManager - before find element: By.id: seats
+14:28:59.023 INFO  manager.ApplicationManager - after find element: By.id: seats
+14:28:59.027 INFO  manager.ApplicationManager - start method click on element input
+14:28:59.074 INFO  manager.ApplicationManager - method click is executed
+14:28:59.074 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.113 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.114 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.174 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.174 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.213 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.213 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.253 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.254 INFO  manager.ApplicationManager - before find element: By.id: class
+14:28:59.267 INFO  manager.ApplicationManager - after find element: By.id: class
+14:28:59.272 INFO  manager.ApplicationManager - start method click on element input
+14:28:59.308 INFO  manager.ApplicationManager - method click is executed
+14:28:59.308 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.338 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.338 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.365 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.366 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.394 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.395 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.431 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.432 INFO  manager.ApplicationManager - before find element: By.id: serialNumber
+14:28:59.447 INFO  manager.ApplicationManager - after find element: By.id: serialNumber
+14:28:59.456 INFO  manager.ApplicationManager - start method click on element input
+14:28:59.494 INFO  manager.ApplicationManager - method click is executed
+14:28:59.494 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.527 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.527 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.555 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.555 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.581 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.581 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.620 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.621 INFO  manager.ApplicationManager - before find element: By.id: price
+14:28:59.636 INFO  manager.ApplicationManager - after find element: By.id: price
+14:28:59.641 INFO  manager.ApplicationManager - start method click on element input
+14:28:59.682 INFO  manager.ApplicationManager - method click is executed
+14:28:59.683 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.721 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.722 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.765 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.765 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.807 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.807 INFO  manager.ApplicationManager - Value of the element will be changed
+14:28:59.850 INFO  manager.ApplicationManager - Value of the element is changed
+14:28:59.851 INFO  manager.ApplicationManager - before find element: By.id: about
+14:28:59.901 INFO  manager.ApplicationManager - after find element: By.id: about
+14:28:59.914 INFO  manager.ApplicationManager - start method click on element textarea
+14:28:59.960 INFO  manager.ApplicationManager - method click is executed
+14:28:59.960 INFO  manager.ApplicationManager - Value of the element will be changed
+14:29:00.001 INFO  manager.ApplicationManager - Value of the element is changed
+14:29:00.002 INFO  manager.ApplicationManager - Value of the element will be changed
+14:29:00.041 INFO  manager.ApplicationManager - Value of the element is changed
+14:29:00.041 INFO  manager.ApplicationManager - Value of the element will be changed
+14:29:00.070 INFO  manager.ApplicationManager - Value of the element is changed
+14:29:00.070 INFO  manager.ApplicationManager - before find element: By.cssSelector: button[type = 'submit']
+14:29:00.079 INFO  manager.ApplicationManager - after find element: By.cssSelector: button[type = 'submit']
+14:29:00.084 INFO  manager.ApplicationManager - start method click on element button
+14:29:00.130 INFO  manager.ApplicationManager - method click is executed
+14:29:02.134 INFO  manager.ApplicationManager - before find element: By.cssSelector: .dialog-container>h2
+14:29:02.150 INFO  manager.ApplicationManager - after find element: By.cssSelector: .dialog-container>h2
+14:29:02.162 INFO  manager.ApplicationManager - get text from element with text: KIA Sportage added successful
+14:29:02.169 INFO  manager.ApplicationManager - got the text successfully
+14:29:04.173 INFO  manager.ApplicationManager - before find element: By.cssSelector: .dialog-container>h2
+14:29:04.185 INFO  manager.ApplicationManager - after find element: By.cssSelector: .dialog-container>h2
+14:29:04.192 INFO  manager.ApplicationManager - get text from element with text: KIA Sportage added successful
+14:29:04.199 INFO  manager.ApplicationManager - got the text successfully
+14:29:04.201 INFO  manager.ApplicationManager - before find element: By.xpath: //button[text() = 'Search cars']
+14:29:04.213 INFO  manager.ApplicationManager - after find element: By.xpath: //button[text() = 'Search cars']
+14:29:04.217 INFO  manager.ApplicationManager - start method click on element button
+14:29:04.249 INFO  manager.ApplicationManager - method click is executed
+14:29:04.250 INFO  tests.TestBase - ==================================
