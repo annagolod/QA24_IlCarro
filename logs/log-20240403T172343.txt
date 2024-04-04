@@ -1,3 +1,0 @@
-17:23:46.036 INFO  manager.ApplicationManager - All tests run in Chrome Browser
-17:23:48.047 INFO  manager.ApplicationManager - The link --> https://ilcarro.web.app/search
-17:23:48.081 INFO  tests.TestBase - Name of method --> registrationBlankName
