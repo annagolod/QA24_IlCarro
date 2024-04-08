@@ -1,5 +1,6 @@
 package tests;
 
+import manager.DataProviderUser;
 import models.User;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -23,10 +24,10 @@ public class LoginTests extends TestBase{
         }
     }
 
-    @Test
-    public void loginSuccessModel(){
-        logger.info("Test data --> email: tretam0810@gmail.com, password: Carro54321#");
-        User user = new User().withEmail("tretam0810@gmail.com").withPassword("Carro54321#");
+    @Test(dataProvider = "loginSuccessModel", dataProviderClass = DataProviderUser.class)
+    public void loginSuccessModel(User user){
+        logger.info("Tests run with data --> " + user.toString());
+        //User user = new User().withEmail("tretam0810@gmail.com").withPassword("Carro54321#");
 //        user.setEmail("tretam0810@gmail.com");
 //        user.setPassword("Carro54321#");
         app.getHelperUser().openLoginForm();

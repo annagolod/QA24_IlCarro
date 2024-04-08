@@ -1,5 +1,6 @@
 package tests;
 
+import manager.DataProviderCar;
 import models.Car;
 import models.User;
 import org.testng.Assert;
@@ -15,21 +16,23 @@ public class AddNewCarTests extends TestBase{
 
     }
 
-    @Test
-    public void addNewCarSuccessAll(){
+    @Test(dataProvider = "addNewCarSuccess", dataProviderClass = DataProviderCar.class)
+    public void addNewCarSuccessAll(Car car){
         int i = (int)(System.currentTimeMillis()/1000)%3600;
-        Car car = Car.builder()
-                .location("Tel Aviv, Israel")
-                .manufacture("Mazda")
-                .model("M3")
-                .year("2022")
-                .fuel("Petrol")
-                .seats(4)
-                .carClass("C")
-                .carRegNumber("978-506-" + i)
-                .price(50)
-                .about("Nice car")
-                .build();
+//        Car car = Car.builder()
+//                .location("Tel Aviv, Israel")
+//                .manufacture("Mazda")
+//                .model("M3")
+//                .year("2022")
+//                .fuel("Petrol")
+//                .seats(4)
+//                .carClass("C")
+//                .carRegNumber("978-506-" + i)
+//                .price(50)
+//                .about("Nice car")
+//                .build();
+
+        logger.info("Tests run with data --> " + car.toString());
         app.getHelperCar().openCarForm();
         app.getHelperCar().fillCarForm(car);
         app.getHelperCar().attachPhoto("/Users/annagolod/Documents/GitHub/QA24_IlCarro/lamb.jpeg");

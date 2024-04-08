@@ -2,6 +2,7 @@ package manager;
 
 import com.google.common.io.Files;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
 import java.io.IOException;
@@ -75,4 +76,5 @@ public class HelperBase {
             throw new RuntimeException(e);
         }
     }
+
 }
