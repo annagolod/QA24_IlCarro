@@ -110,6 +110,7 @@ public class HelperCar extends HelperBase{
             click(By.cssSelector("button[aria-label = 'Next month']"));
         }
     }
+//This method works after data with 2025 year if the next test will be with 2024 only with method restoreDateNow()
 
     public void searchAnyPeriod(String city, String dateFrom, String dateTo) {
 
@@ -153,7 +154,7 @@ public class HelperCar extends HelperBase{
         click(By.xpath("//div[text()=' " + to.getDayOfMonth() + " ']"));
 
     }
-
+//This is universal test with clicking on Year and Month buttons for input of any date
     public void searchAnyPeriod2(String city, String dateFrom, String dateTo) {
 
         typeCity(city);
@@ -194,7 +195,5 @@ public class HelperCar extends HelperBase{
         clickDate(now);
         clickDate(now);
     }
-
-//        By inputDates = By.cssSelector("form.ng-valid.ng-touched.ng-dirty>div:nth-child(2)>input");
 
 }
