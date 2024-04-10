@@ -64,6 +64,7 @@ public class HelperCar extends HelperBase{
 
     public void searchCurrentMonth(String city, String dateFrom, String dateTo) {
         typeCity(city);
+        clearTextBox(By.id("dates"));
         click(By.id("dates"));
         String[] from = dateFrom.split("/");
         String locatorFrom = "//div[text()=' " + from[1] + " ']";
@@ -85,6 +86,7 @@ public class HelperCar extends HelperBase{
 
     public void searchCurrentYear(String city, String dateFrom, String dateTo) {
         typeCity(city);
+        clearTextBox(By.id("dates"));
         click(By.id("dates"));
         LocalDate now = LocalDate.now();
         //int year = now.getYear();
@@ -115,6 +117,7 @@ public class HelperCar extends HelperBase{
     public void searchAnyPeriod(String city, String dateFrom, String dateTo) {
 
         typeCity(city);
+        clearTextBox(By.id("dates"));
         click(By.id("dates"));
 
         LocalDate now = LocalDate.now();
@@ -158,6 +161,7 @@ public class HelperCar extends HelperBase{
     public void searchAnyPeriod2(String city, String dateFrom, String dateTo) {
 
         typeCity(city);
+        clearTextBox(By.id("dates"));
         click(By.id("dates"));
 
         LocalDate from = LocalDate.parse(dateFrom, DateTimeFormatter.ofPattern("M/d/yyyy"));
@@ -165,6 +169,41 @@ public class HelperCar extends HelperBase{
 
         clickDate(from);
         clickDate(to);
+
+    }
+
+    public void searchAnyPeriod3(String city, String dateFrom, String dateTo) {
+
+        typeCity(city);
+        clearTextBox(By.id("dates"));
+        click(By.id("dates"));
+
+        LocalDate now = LocalDate.now();
+        LocalDate from = LocalDate.parse(dateFrom, DateTimeFormatter.ofPattern("M/d/yyyy"));
+        LocalDate to = LocalDate.parse(dateTo, DateTimeFormatter.ofPattern("M/d/yyyy"));
+
+        int diffYear;
+        int diffMonth;
+///***from
+        diffYear = from.getYear() - now.getYear();
+        if(diffYear == 0){
+            diffMonth = from.getMonthValue() - now.getMonthValue();
+        }else{
+            diffMonth = 12 - now.getMonthValue() + from.getMonthValue();
+        }
+        clickNextMonthButton(diffMonth);
+        String locator = String.format("//div[text() = ' $s ']", from.getDayOfMonth());
+        click(By.xpath(locator));
+  ///***to
+        diffYear = to.getYear() - from.getYear();
+        if(diffYear == 0){
+            diffMonth = to.getMonthValue() - from.getMonthValue();
+        }else{
+            diffMonth = 12 - from.getMonthValue() + to.getMonthValue();
+        }
+        clickNextMonthButton(diffMonth);
+        locator = String.format("//div[text() = ' $s ']", to.getDayOfMonth());
+        click(By.xpath(locator));
 
     }
 
@@ -196,4 +235,11 @@ public class HelperCar extends HelperBase{
         clickDate(now);
     }
 
+    public void navigateByLogo() {
+        click(By.cssSelector("a.logo"));
+    }
+
+    public void searchNotValidPeriod(String city, String dateFrom, String dateTo) {
+
+    }
 }

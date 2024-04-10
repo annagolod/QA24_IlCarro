@@ -16,34 +16,34 @@ public class HelperBase {
         this.wd = wd;
     }
 
-    public void type(By locator, String text){
+    public void type(By locator, String text) {
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
         clearNew(element);
-        if (text != null){
+        if (text != null) {
             element.sendKeys(text);
         }
     }
 
-    public void clearNew(WebElement element){
+    public void clearNew(WebElement element) {
         element.sendKeys("a");
         element.sendKeys(Keys.BACK_SPACE);
     }
 
 
-    public void click(By locator){
+    public void click(By locator) {
         WebElement element = wd.findElement(locator);
         element.click();
     }
 
-    public boolean isElementPresent(By locator){
+    public boolean isElementPresent(By locator) {
         List<WebElement> list = wd.findElements(locator);
         return !list.isEmpty();
 
     }
 
-    public void pause(int time){
+    public void pause(int time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
@@ -58,7 +58,7 @@ public class HelperBase {
 
     }
 
-    public void submit(){
+    public void submit() {
         click(By.cssSelector("button[type = 'submit']"));
     }
 
@@ -67,7 +67,7 @@ public class HelperBase {
         return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
     }
 
-    public void getScreen(String link){
+    public void getScreen(String link) {
         TakesScreenshot takesScreenshot = (TakesScreenshot) wd;
         File tmp = takesScreenshot.getScreenshotAs(OutputType.FILE);
         try {
@@ -75,6 +75,17 @@ public class HelperBase {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void clearTextBox(By locator) {
+        WebElement element = wd.findElement(locator);
+        String os = System.getProperty("os.name");
+        if (os.startsWith("Mac")) {
+            element.sendKeys(Keys.COMMAND, "a");
+        } else {
+            element.sendKeys(Keys.CONTROL, "a");
+        }
+        element.sendKeys(Keys.DELETE);
     }
 
 }
