@@ -88,4 +88,12 @@ public class HelperBase {
         element.sendKeys(Keys.DELETE);
     }
 
+    public String getErrorText() {
+        return wd.findElement(By.cssSelector("div.error")).getText();
+    }
+
+    public void refreshPage(){
+        wd.navigate().refresh();
+    }
+
 }

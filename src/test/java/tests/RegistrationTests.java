@@ -1,5 +1,6 @@
 package tests;
 
+import manager.DataProviderUser;
 import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,16 +29,16 @@ public class RegistrationTests extends TestBase{
 //        }
     }
 
-    @Test
-    public void registrationSuccess(){
-        Random random = new Random();
-        int i = random.nextInt(1000);
-        //int y = (int)(System.currentTimeMillis()/1000)%3600;
-        User user = new User()
-                .withFirstName("Alisa")
-                .withLastName("Snowball")
-                .withEmail("alsnow" + i + "@gmail.com")
-                .withPassword("Alisa123456$");
+    @Test(dataProvider = "registrationFile", dataProviderClass = DataProviderUser.class)
+    public void registrationSuccess(User user){
+//        Random random = new Random();
+//        int i = random.nextInt(1000);
+//        //int y = (int)(System.currentTimeMillis()/1000)%3600;
+//        User user = new User()
+//                .withFirstName("Alisa")
+//                .withLastName("Snowball")
+//                .withEmail("alsnow" + i + "@gmail.com")
+//                .withPassword("Alisa123456$");
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);

@@ -1,10 +1,7 @@
 package manager;
 
 import models.Car;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.LocalDate;
@@ -240,6 +237,12 @@ public class HelperCar extends HelperBase{
     }
 
     public void searchNotValidPeriod(String city, String dateFrom, String dateTo) {
+        typeCity(city);
+        clearTextBox(By.id("dates"));
+        type(By.id("dates"), dateFrom + " - " + dateTo);
 
+    }
+    public void clickOnSearch(){
+        click(By.cssSelector("a[href='/search']"));
     }
 }
