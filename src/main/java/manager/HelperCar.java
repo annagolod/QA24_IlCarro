@@ -189,7 +189,7 @@ public class HelperCar extends HelperBase{
             diffMonth = 12 - now.getMonthValue() + from.getMonthValue();
         }
         clickNextMonthButton(diffMonth);
-        String locator = String.format("//div[text() = ' $s ']", from.getDayOfMonth());
+        String locator = String.format("//div[text() = ' %s ']", from.getDayOfMonth());
         click(By.xpath(locator));
   ///***to
         diffYear = to.getYear() - from.getYear();
@@ -199,7 +199,7 @@ public class HelperCar extends HelperBase{
             diffMonth = 12 - from.getMonthValue() + to.getMonthValue();
         }
         clickNextMonthButton(diffMonth);
-        locator = String.format("//div[text() = ' $s ']", to.getDayOfMonth());
+        locator = String.format("//div[text() = ' %s ']", to.getDayOfMonth());
         click(By.xpath(locator));
 
     }
@@ -240,9 +240,14 @@ public class HelperCar extends HelperBase{
         typeCity(city);
         clearTextBox(By.id("dates"));
         type(By.id("dates"), dateFrom + " - " + dateTo);
+        clickOnOverlay();
 
     }
     public void clickOnSearch(){
         click(By.cssSelector("a[href='/search']"));
+    }
+
+    public void clickOnOverlay() {
+        click(By.cssSelector("div.cdk-overlay-backdrop.mat-overlay-transparent-backdrop.cdk-overlay-backdrop-showing"));
     }
 }

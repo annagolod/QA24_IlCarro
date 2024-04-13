@@ -64,10 +64,12 @@ public class SearchCarTests extends TestBase {
         Assert.assertEquals(app.getHelperCar().getErrorText(), "You can't pick date before today");
         Assert.assertTrue(app.getHelperCar().isYallaButtonNotActive());
 
+
     }
 
     @AfterMethod
     public void postCondition() {
-        //app.getHelperCar().navigateByLogo();
+        app.getHelperCar().clickOnSearch();
+        app.getHelperCar().navigateByLogo();
     }
 }
