@@ -10,14 +10,14 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase{
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
         if(app.getHelperUser().isLogged()){
             app.getHelperUser().logout();
             logger.info("Before method was log out");
         }
     }
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void postCondition(){
         if(app.getHelperUser().isElementPresent(By.xpath("//button[text() = 'Ok']"))) {
             app.getHelperUser().clickOkButton();
@@ -39,7 +39,7 @@ public class LoginTests extends TestBase{
 
     }
 
-    @Test
+    @Test(groups = {"smoke"})
     public void loginSuccess(){
         logger.info("Test data --> email: tretam0810@gmail.com, password: Carro54321#");
        app.getHelperUser().openLoginForm();

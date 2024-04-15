@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class AddNewCarTests extends TestBase{
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     private void preCondition(){
         if(!app.getHelperUser().isLogged())
             app.getHelperUser().login(new User().withEmail("tretam0810@gmail.com").withPassword("Carro54321#"));
@@ -44,7 +44,7 @@ public class AddNewCarTests extends TestBase{
                 car.getManufacture() + " " + car.getModel() + " added successful");
     }
 
-    @Test
+    @Test(groups = {"smoke"})
     public void addNewCarSuccess(){
         int i = (int)(System.currentTimeMillis()/1000)%3600;
         Car car = Car.builder()
@@ -66,7 +66,7 @@ public class AddNewCarTests extends TestBase{
         Assert.assertEquals(app.getHelperCar().getMessage(),
                 car.getManufacture() + " " + car.getModel() + " added successful");
     }
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void postCondition(){
         app.getHelperCar().returnToHome();
     }

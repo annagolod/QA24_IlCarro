@@ -45,7 +45,7 @@ public class SearchCarTests extends TestBase {
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
     }
 
-    @Test(dataProvider = "searchAnyPeriodSuccess", dataProviderClass = DataProviderSearch.class)
+    @Test(dataProvider = "searchAnyPeriodSuccess", dataProviderClass = DataProviderSearch.class, groups = {"smoke"})
     public void searchAnyPeriodSuccess2(String city, String dateFrom, String dateTo) {
         logger.info("Tests run with data --> " + city + dateFrom + dateTo);
 //        app.getHelperCar().restoreDateNow();
@@ -68,7 +68,7 @@ public class SearchCarTests extends TestBase {
 
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void postCondition() {
         app.getHelperCar().clickOnSearch();
         app.getHelperCar().navigateByLogo();

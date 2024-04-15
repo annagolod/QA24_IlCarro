@@ -13,13 +13,13 @@ import org.testng.annotations.Test;
 import java.util.Random;
 
 public class RegistrationTests extends TestBase{
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
         if(app.getHelperUser().isLogged())
             app.getHelperUser().logout();
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void postCondition(){
         if(app.getHelperUser().isElementPresent(By.xpath("//button[text() = 'Ok']"))) {
             app.getHelperUser().clickOkButton();
@@ -49,7 +49,7 @@ public class RegistrationTests extends TestBase{
         Assert.assertEquals(app.getHelperUser().getMessage(), "You are logged in success");
     }
 
-    @Test
+    @Test(groups = {"smoke"})
     public void registrationBlankName(){
         User user = new User()
                 .withFirstName(" ")
